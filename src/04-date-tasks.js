@@ -81,7 +81,7 @@ function isLeapYear(date) {
 function timeSpanToString(startDate, endDate) {
   const diff = endDate.getTime() - startDate.getTime();
   const milli = String(
-    endDate.getMilliseconds() - startDate.getMilliseconds()
+    endDate.getMilliseconds() - startDate.getMilliseconds(),
   ).padStart(3, '0');
   const dave = new Date(diff).toISOString().slice(11, 19);
   return `${dave}.${milli}`;
